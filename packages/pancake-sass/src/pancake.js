@@ -107,7 +107,7 @@ module.exports.pancake = ( version, modules, settings, GlobalSettings, cwd ) => 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 		let compiledAll = [];      //for collect all promises
 		let allSass = '';          //all modules to be collected for SETTINGS.css.name file
-		let sassVersioning = true; //let’s assume the pancake module was build with sass-versioning
+		let sassVersioning = false; //let’s assume the pancake module was build with sass-versioning
 		const sassVersioningPath = ( Fs.existsSync( Path.normalize( `${ cwd }/../node_modules/sass-versioning` ) ) )
 			? Path.normalize( `${ cwd }/../node_modules/sass-versioning/dist/_index.scss` ).replace(/\\/g, "\\\\")
 			: Path.normalize( `${ cwd }/node_modules/sass-versioning/dist/_index.scss` ).replace(/\\/g, "\\\\");
